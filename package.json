@@ -1,0 +1,38 @@
+{
+  "name": "myclaw",
+  "version": "0.1.0",
+  "description": "MyClaw local AI gateway daemon (Phase 1 skeleton)",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "myclaw": "dist/index.js"
+  },
+  "scripts": {
+    "dev": "tsx src/index.ts start",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js start",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "gateway",
+    "ai",
+    "websocket",
+    "openclaw"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@ai-sdk/openai": "^1.3.22",
+    "@fastify/websocket": "^10.0.1",
+    "ai": "^4.3.16",
+    "commander": "^14.0.1",
+    "dotenv": "^16.5.0",
+    "fastify": "^5.2.1",
+    "ws": "^8.18.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "@types/ws": "^8.18.1",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}
